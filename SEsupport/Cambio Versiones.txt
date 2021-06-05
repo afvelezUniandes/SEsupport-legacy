@@ -1,0 +1,37 @@
+﻿-version 1.1.3.4
+* Se arregla la impresion de inventarios para que puedan salir mas de 1 hoja
+-version 1.1.3.3
+* Se organizan las quejas y no conformidades para que siempre pidan producto excepto que se deshabilite la opcion.
+
+-- version 1.1.3.0(16/01/2014)
+* Se modifican los permisos para generar los ajustes de inventario
+* Se modifican los permisos de visualizar las bodegas cuando se ingresan los inventarios
+* No pide confirmación si se ha hecho inventario para la fecha establecida
+* Se arreglo cuando se le indica NO en el ingreso del inventario.
+
+-- version 1.1.0.0(30/10/2013)
+* Se agrega funcionalidad envío de correos para:
+	+ cambio de estado
+	+ nuevo requerimiento
+	+ calificacion de requerimiento
+	+ reabrir requerimiento
+	+ ciclo de aprobación
+* Se agrega funcionalidad para que actualice el correo desde la tabla usuarios
+* Se agrega el historico de reabrir soluciones
+* Se adicionan los filtros en los ciclos de aprobación.
+* Se agrega la opcion de mostrar la IP.
+
+-- version 1.0.0.8 (17/10/2013)
+* Se arregla adjuntar en quejas y no conformidades.
+* Se cambia la funcionalidad de cambiar contraseña, ya no permite copiar y pegar en los campos.
+
+-- version 1.0.0.7 (11/10/2013)
+* Ciclo de aprobación
+
+-- Version 1.0.0.6 (04/10/2013)
+* Nueva funcionalidad "Adjuntar" en quejas y no conformidades
+* Nueva funcionalidad "cambiar contraseña" por usuario final en el menu inicial
+* Arregla formulario Usuarios, problemas con el nivel. 
+* Modifica la pantalla inical para quejas y no conformidades.  Se permite filtrar por fechas y se muestra el historico entre fechas
+* Se agrega formulario Ayuda con informacion de tipo de soporte en quejas y no conformidades.
+* Se crea una clase nueva en la que se ingresan funcionalidades generales para todo el proyecto.

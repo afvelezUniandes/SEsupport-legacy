@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2FC12A87-25EA-4740-B55F-27F4F1E688F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SEsupport.My.MyApplication</StartupObject>
+    <RootNamespace>SEsupport</RootNamespace>
+    <AssemblyName>SEsupport</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\192.168.0.7\SeSupport\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>SeSupport</ProductName>
+    <MinimumRequiredVersion>2.3.3.0</MinimumRequiredVersion>
+    <WebPage>instalar.html</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>2.3.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>\\pastse6\Sesupport\Application Files\packages</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SEsupport.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SEsupport.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logotipo_SE_.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B86D04842BAF059DB706CBC517B3DC9BE4CE0F73</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\connection.vb" />
+    <Compile Include="Clases\Funciones_generales.vb" />
+    <Compile Include="Clases\Querys_agotados.vb" />
+    <Compile Include="Clases\Querys_horario.vb" />
+    <Compile Include="Clases\Querys_impresiones_inventarios.vb" />
+    <Compile Include="Clases\Querys_incidentes.vb" />
+    <Compile Include="Clases\Querys_inventarios.vb" />
+    <Compile Include="Clases\Querys_pos_administrativo.vb" />
+    <Compile Include="Clases\Querys_quejas.vb" />
+    <Compile Include="Conexion.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\adjuntar.Designer.vb">
+      <DependentUpon>adjuntar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\adjuntar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administracion\cambio_contraseña.Designer.vb">
+      <DependentUpon>cambio_contraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Administracion\cambio_contraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administracion\Permisos.Designer.vb">
+      <DependentUpon>Permisos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Administracion\Permisos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Agotados\Agotados.Designer.vb">
+      <DependentUpon>Agotados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Agotados\Agotados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Agotados\kardex_agotados.Designer.vb">
+      <DependentUpon>kardex_agotados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Agotados\kardex_agotados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Contabilidad\Exportar.vb" />
+    <Compile Include="Formularios\Contabilidad\Importar.vb" />
+    <Compile Include="Formularios\Contabilidad\Pagos_provee.Designer.vb">
+      <DependentUpon>Pagos_provee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Contabilidad\Pagos_provee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Contabilidad\Proveedores.Designer.vb">
+      <DependentUpon>Proveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Contabilidad\Proveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Horarios\Areas.Designer.vb">
+      <DependentUpon>Areas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Horarios\Areas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Horarios\calendario_festivos.Designer.vb">
+      <DependentUpon>calendario_festivos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Horarios\calendario_festivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Horarios\Crear_horario.Designer.vb">
+      <DependentUpon>Crear_horario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Horarios\Crear_horario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Horarios\empleados.Designer.vb">
+      <DependentUpon>empleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Horarios\empleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Horarios\seleccion_turno_horario.Designer.vb">
+      <DependentUpon>seleccion_turno_horario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Horarios\seleccion_turno_horario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Horarios\turnos.Designer.vb">
+      <DependentUpon>turnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Horarios\turnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\ciclo_aprobacion.Designer.vb">
+      <DependentUpon>ciclo_aprobacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\ciclo_aprobacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\Comentarios.Designer.vb">
+      <DependentUpon>Comentarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\Comentarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\Editar_usuario_req.Designer.vb">
+      <DependentUpon>Editar_usuario_req.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\Editar_usuario_req.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\Editar_tecnico_req.Designer.vb">
+      <DependentUpon>Editar_tecnico_req.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\Editar_tecnico_req.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administracion\Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Administracion\Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\Principal_tecnico_req.Designer.vb">
+      <DependentUpon>Principal_tecnico_req.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\Principal_tecnico_req.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inventarios\Ajuste_inventarios.Designer.vb">
+      <DependentUpon>Ajuste_inventarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Inventarios\Ajuste_inventarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inventarios\Ajuste_inventarios_diario.Designer.vb">
+      <DependentUpon>Ajuste_inventarios_diario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Inventarios\Ajuste_inventarios_diario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inventarios\Impresion_Inventario.Designer.vb">
+      <DependentUpon>Impresion_Inventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Inventarios\Impresion_Inventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inventarios\Ingreso_inventarios.Designer.vb">
+      <DependentUpon>Ingreso_inventarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Inventarios\Ingreso_inventarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pos_administrativo\Administrar TRM.Designer.vb">
+      <DependentUpon>Administrar TRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pos_administrativo\Administrar TRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pos_administrativo\f_kardex.Designer.vb">
+      <DependentUpon>f_kardex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pos_administrativo\f_kardex.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pos_administrativo\Inicio_pos_admin.Designer.vb">
+      <DependentUpon>Inicio_pos_admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pos_administrativo\Inicio_pos_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pos_administrativo\Pos Administrativo.Designer.vb">
+      <DependentUpon>Pos Administrativo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pos_administrativo\Pos Administrativo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pos_administrativo\Sincronizador.Designer.vb">
+      <DependentUpon>Sincronizador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pos_administrativo\Sincronizador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Productos\Codigos.Designer.vb">
+      <DependentUpon>Codigos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Productos\Codigos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Quejas\Ayuda_queja.Designer.vb">
+      <DependentUpon>Ayuda_queja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Quejas\Ayuda_queja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Quejas\Editar_usuario_queja.Designer.vb">
+      <DependentUpon>Editar_usuario_queja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Quejas\Editar_usuario_queja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Quejas\Principal_usuario_queja.Designer.vb">
+      <DependentUpon>Principal_usuario_queja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Quejas\Principal_usuario_queja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Administracion\Usuario.Designer.vb">
+      <DependentUpon>Usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Administracion\Usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\Principal_usuario_req.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Incidentes\Principal_usuario_req.Designer.vb">
+      <DependentUpon>Principal_usuario_req.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clases\Variables_generales.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Conexion.dbml.layout">
+      <DependentUpon>Conexion.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Formularios\adjuntar.resx">
+      <DependentUpon>adjuntar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Administracion\cambio_contraseña.resx">
+      <DependentUpon>cambio_contraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Administracion\Permisos.resx">
+      <DependentUpon>Permisos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Agotados\Agotados.resx">
+      <DependentUpon>Agotados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Agotados\kardex_agotados.resx">
+      <DependentUpon>kardex_agotados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Contabilidad\Pagos_provee.resx">
+      <DependentUpon>Pagos_provee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Contabilidad\Proveedores.resx">
+      <DependentUpon>Proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Horarios\Areas.resx">
+      <DependentUpon>Areas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Horarios\calendario_festivos.resx">
+      <DependentUpon>calendario_festivos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Horarios\Crear_horario.resx">
+      <DependentUpon>Crear_horario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Horarios\empleados.resx">
+      <DependentUpon>empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Horarios\seleccion_turno_horario.resx">
+      <DependentUpon>seleccion_turno_horario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Horarios\turnos.resx">
+      <DependentUpon>turnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Incidentes\ciclo_aprobacion.resx">
+      <DependentUpon>ciclo_aprobacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Incidentes\Comentarios.resx">
+      <DependentUpon>Comentarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Incidentes\Editar_tecnico_req.resx">
+      <DependentUpon>Editar_tecnico_req.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Incidentes\Editar_usuario_req.resx">
+      <DependentUpon>Editar_usuario_req.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Administracion\Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Incidentes\Principal_tecnico_req.resx">
+      <DependentUpon>Principal_tecnico_req.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inventarios\Ajuste_inventarios.resx">
+      <DependentUpon>Ajuste_inventarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inventarios\Ajuste_inventarios_diario.resx">
+      <DependentUpon>Ajuste_inventarios_diario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inventarios\Impresion_Inventario.resx">
+      <DependentUpon>Impresion_Inventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inventarios\Ingreso_inventarios.resx">
+      <DependentUpon>Ingreso_inventarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pos_administrativo\Administrar TRM.resx">
+      <DependentUpon>Administrar TRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pos_administrativo\f_kardex.resx">
+      <DependentUpon>f_kardex.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pos_administrativo\Inicio_pos_admin.resx">
+      <DependentUpon>Inicio_pos_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pos_administrativo\Pos Administrativo.resx">
+      <DependentUpon>Pos Administrativo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pos_administrativo\Sincronizador.resx">
+      <DependentUpon>Sincronizador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Productos\Codigos.resx">
+      <DependentUpon>Codigos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Quejas\Ayuda_queja.resx">
+      <DependentUpon>Ayuda_queja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Quejas\Editar_usuario_queja.resx">
+      <DependentUpon>Editar_usuario_queja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Quejas\Principal_usuario_queja.resx">
+      <DependentUpon>Principal_usuario_queja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Administracion\Usuario.resx">
+      <DependentUpon>Usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Incidentes\Principal_usuario_req.resx">
+      <DependentUpon>Principal_usuario_req.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="SEsupport_1_TemporaryKey.pfx" />
+    <None Include="SEsupport_2_TemporaryKey.pfx" />
+    <None Include="SEsupport_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Conexion.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Conexion.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="SEsupport_ClaveTemporal.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.11.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2012 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.11.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2012 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.11.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2012 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cambio Versiones.txt" />
+    <Content Include="Imagenes\Logo1.jpg" />
+    <Content Include="Imagenes\Logos2.jpg" />
+    <Content Include="Imagenes\Logotipo  -SE-.jpg" />
+    <Content Include="Logotipo_SE_.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
