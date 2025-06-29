@@ -5,7 +5,7 @@ Imports System.Data.OleDb
 
 Public Class connection
     Private dt As New DataTable
-    Private connectionstring As String = "Server=192.168.0.6;Database=sesupport;User Id=sa;Password=82KPrz*53.;Connection Timeout=0;"
+    Private connectionstring As String = ""
 
     Sub ejecutar_query(sql As String)
         Dim conexion As New SqlConnection(connectionstring)
